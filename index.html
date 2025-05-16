@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetat e Gatimit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Recetat e Gatimit</h1>
+
+      <form id="recipeForm">
+        <input type="text" id="name" placeholder="Emri i recetës" required />
+        <input type="text" id="category" placeholder="Kategoria" required />
+        <input
+          type="text"
+          id="time"
+          placeholder="Koha e gatimit (min)"
+          required
+        />
+        <textarea id="ingredients" placeholder="Përbërësit" required></textarea>
+        <button type="submit">Ruaj Recetën</button>
+      </form>
+
+      <div id="confirmModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <p>A je i sigurt që do ta fshish këtë recetë?</p>
+          <button id="confirmYes">Po</button>
+          <button id="confirmNo">Jo</button>
+        </div>
+      </div>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Kërko recetën që ke ruajtur..."
+      />
+
+      <div id="recipesContainer" class="card-container"></div>
+      <br />
+      <h2>Recetat e Gatshme</h2>
+      <input
+        type="text"
+        id="searchApiInput"
+        placeholder="Kërko recetën e gatshme..."
+      />
+
+      <div id="apiRecipesContainer" class="card-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
